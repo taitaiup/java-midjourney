@@ -1,0 +1,4 @@
+本项目是GitHub上@novicezk作者的midjourney-proxy项目的学习成果
+基础功能midjourney-proxy已经都写好了，而且非常好
+
+我仅仅是开源了他未开源的vary_region功能
