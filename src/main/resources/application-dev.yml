@@ -1,0 +1,55 @@
+server:
+  #  https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-graceful-shutdown
+  shutdown: immediate
+  compression:
+    enabled: false
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  data:
+    redis:
+      host:
+      port: 6379
+      database: 7
+      password:
+      lettuce:
+        pool:
+          max-active: 10
+          max-idle: 20
+          max-wait: 600000
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  level:
+    org.springframework.data.mongodb.core: DEBUG
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logstash:
+  host: logstash-java-logstash.logging.svc.cluster.local:4560
+
+mj:
+  discord:
+    user-token:
+    bot-token:
+    guild-id:
+    channel-id:
+    user-agent:
+  ng-discord:
+    server:
+    wss:
+    cdn:
+    upload-server:
+
+
+

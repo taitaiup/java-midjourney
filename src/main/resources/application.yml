@@ -1,0 +1,37 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: ON_PARAM #用法 URL中加入?trace=true参数可以看到堆栈
+    include-exception: false
+  tomcat:
+    basedir: logs/server
+    accesslog:
+      enabled: true
+spring:
+  application:
+    name: java-midjourney
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: always
+    date-format: yyyy-MM-dd HH:mm:ss
+logging:
+  level:
+    root: INFO
+  file:
+    path: logs
+mybatis-plus:
+  mapper-locations: classpath:com/mj/mapper/xml/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.mj.entity
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+tencent:
+  api:
+    secretId:
+    secretKey:
